@@ -6,6 +6,7 @@ const nextConfig = {
   assetPrefix: '/Creative-Portfolio/',
   transpilePackages: ['framer-motion'],
   images: {
+    unoptimized: true,
     remotePatterns: [
       { protocol: 'https', hostname: 'images.unsplash.com' },
       { protocol: 'https', hostname: 'plus.unsplash.com' },

@@ -57,7 +57,7 @@ export default function AnimatedText({
     return (
       <Tag ref={ref as React.RefObject<HTMLHeadingElement & HTMLParagraphElement>} className={className}>
         {lines.map((line, i) => (
-          <span key={i} className="block overflow-hidden">
+          <span key={i} className="block">
             <motion.span
               className="block"
               variants={lineVariants}
@@ -81,7 +81,7 @@ export default function AnimatedText({
       className={cn('flex flex-wrap gap-x-[0.25em]', className)}
     >
       {words.map((word, i) => (
-        <span key={i} className="overflow-hidden">
+        <span key={i}>
           <motion.span
             className="inline-block"
             variants={wordVariants}
