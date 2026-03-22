@@ -96,10 +96,10 @@ export default function Hero() {
         </motion.div>
 
         {/* Giant headline */}
-        <div className="overflow-hidden">
+        <div>
           <div className="flex flex-wrap">
             {titleWords.map((word, i) => (
-              <div key={i} className="overflow-hidden mr-4">
+              <div key={i} className="mr-4">
                 <motion.h1
                   className="font-display text-[clamp(4rem,14vw,13rem)] font-extrabold leading-[0.88] tracking-[-0.04em] text-white"
                   initial={{ y: '105%' }}

@@ -78,7 +78,7 @@ export default function ProjectDetailClient({ project, nextProject }: Props) {
         </motion.div>
 
         {/* Title */}
-        <div className="overflow-hidden">
+        <div>
           <motion.h1
             className="font-display text-[clamp(2.5rem,7vw,7rem)] font-extrabold leading-[0.92] tracking-tight text-text-primary"
             initial={{ y: '100%' }}

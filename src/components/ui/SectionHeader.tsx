@@ -56,7 +56,7 @@ export default function SectionHeader({
       </motion.div>
 
       {/* Title */}
-      <div className="overflow-hidden">
+      <div>
         <motion.h2
           className="font-display text-[clamp(2.5rem,6vw,5rem)] font-extrabold leading-[0.95] tracking-tight text-text-primary"
           initial={{ y: '100%', opacity: 0 }}
