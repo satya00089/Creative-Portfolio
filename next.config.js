@@ -2,6 +2,8 @@
 const nextConfig = {
   output: 'export',
   trailingSlash: true,
+  basePath: '/creative-portfolio',
+  assetPrefix: '/creative-portfolio/',
   transpilePackages: ['framer-motion'],
   images: {
     remotePatterns: [
