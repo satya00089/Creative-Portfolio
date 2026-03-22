@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── CSS Custom Properties ────────────────────────────────── */
+:root {
+  --font-syne: 'Syne', system-ui, sans-serif;
+  --font-inter: 'Inter', system-ui, sans-serif;
+}
+
+/* ── Base Reset & Typography ──────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  @apply bg-bg-dark text-text-primary font-body;
+  overflow-x: hidden;
+  cursor: none; /* Hide default cursor — custom cursor is used */
+}
+
+/* Show default cursor on mobile/touch where custom cursor isn't useful */
+@media (hover: none) {
+  body {
+    cursor: auto;
+  }
+}
+
+/* ── Selection ────────────────────────────────────────────── */
+::selection {
+  background-color: #c9a84c33;
+  color: #f0ede8;
+}
+
+/* ── Scrollbar ────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #080808;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a2a2a;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c9a84c66;
+}
+
+/* ── Grain overlay ────────────────────────────────────────── */
+.grain-overlay {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+  background-repeat: repeat;
+}
+
+/* ── Custom Cursor Classes ────────────────────────────────── */
+.cursor-hover {
+  width: 12px !important;
+  height: 12px !important;
+}
+.ring-hover {
+  width: 56px !important;
+  height: 56px !important;
+  border-color: #c9a84c !important;
+}
+
+/* ── Smooth font rendering ────────────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-syne);
+}
+
+/* ── Page content wrapper ─────────────────────────────────── */
+.page-content {
+  padding-top: 5rem; /* compensate for fixed header */
+}
+
+/* ── Prose for project detail pages ──────────────────────── */
+.prose-dark p {
+  @apply font-body text-base leading-[1.9] text-text-secondary;
+  margin-bottom: 1.5rem;
+}
+.prose-dark p:last-child {
+  margin-bottom: 0;
+}
